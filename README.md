@@ -197,7 +197,7 @@ systemctl restart hysteria-server # Обязательно для перезаг
 ```bash
 nano /etc/hysteria/config.yaml
 # Удали строку пользователя
-systemctl restart hysteria-server
+systemctl restart hysteria-server # Обязательно для перезагрузки сервера и ввода новых данных
 ```
 
 ---
