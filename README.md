@@ -1,40 +1,40 @@
 # 🗄️ ГАЙД ПО ПОКУПКЕ СЕРВЕРА
 ---
-## Шаг 1: <a href="https://my.hip.hosting/login" target="_blank">Пройти авторизацию на сайте</a>
+## Шаг 1: <a href="https://my.hip.hosting/login" target="_blank"> Пройти авторизацию на сайте</a>
 
-![image_1.png](/image/image_1.png)
+![image_1.png](image_1.png)
 
 ---
 ## Шаг 2: Пополняем кошелек Hip-Hosting на 2.4$ (~180р)
 
-![image_2.png](/image/image_2.png)
+![image_2.png](image_2.png)
 
 ---
 ## Шаг 3: Выбираем сервер Хельсинки (самый стабильный сервер на данный момент)
 
-![image_3.png](/image/image_3.png)
+![image_3.png](image_3.png)
 
 ---
 ## Шаг 4: Нажимаем "Создать сервер"
 
-![image_4.png](/image/image_4.png)
+![image_4.png](image_4.png)
 
 > После создания сервера нужно подождать примено 15 минут!
 ---
 ## Шаг 5: Идем на вкладку "Дашборд" и нажимаем на три точки --> управление
 
-![image_5.png](/image/image_5.png)
+![image_5.png](image_5.png)
 
 ---
 ## Шаг 6: Копируем команду и вставляем ее в терминал
 
-![image_6.png](/image/image_6.png)
+![image_6.png](image_6.png)
 
 ---
 ## Шаг 7: Копируем пароль и вставляем его в терминал
 > Важное предупреждение! Пароль при вводе в терминал НЕ ВИДЕН!
 
-![image_7.png](/image/image_7.png)
+![image_6.png](image_6.png)
 
 ---
 ---
@@ -95,8 +95,8 @@ auth:
     user2: "password2"
 
 bandwidth:
-  up: 100 mbps
-  down: 500 mbps
+  up: 90 mbps
+  down: 100 mbps
 
 ignoreClientBandwidth: true
 EOF
@@ -212,7 +212,7 @@ journalctl -u hysteria-server -f
 IP=$(curl -s ifconfig.me)
 
 # Сгенерировать все ссылки
-grep -E "^    [a-zA-Z0-9]+:" /etc/hysteria/config.yaml | sed 's/"//g' | awk -v ip="$IP" -F': ' '{gsub(/^ +/,"",$1); print "hysteria2://"$1"%3A"$2"@"ip":443/?insecure=1#"$1}'
+grep -E "^    [a-zA-Z0-9]+:" /etc/hysteria/config.yaml | sed 's/"//g' | awk -v ip="$IP" -F': ' '{gsub(^ +/,"",$1); print "hysteria2://"$1"%3A"$2"@"ip":443/?insecure=1#"$1}'
 ```
 
 ---
@@ -246,6 +246,8 @@ systemctl restart hysteria-server # Обязательно для перезаг
 ```
 ---
 # Важное примечание: 
+> После вставки ссылки в приложение-клиент нужно поставить: Insecure - true
+
 ---
 
 # Готово — сервер VPN работает. 🔧
