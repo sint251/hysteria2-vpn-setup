@@ -236,7 +236,7 @@ systemctl restart hysteria-server # Обязательно для перезаг
 
 ---
 
-## 📁 Структура файлов
+## Структура файлов
 
 ```
 /etc/hysteria/
@@ -250,4 +250,12 @@ systemctl restart hysteria-server # Обязательно для перезаг
 
 ---
 
-# Готово — сервер VPN работает. 🔧
+# Готово — VPN работает. 
+
+# Клиенты для VPN 
+
+## Android - NekoBox, V2RayTun NG.
+## iOS - Streisand.
+## Windows - NekoBox
+## MacOS - Nekobox
+## Linux - Nekobox
